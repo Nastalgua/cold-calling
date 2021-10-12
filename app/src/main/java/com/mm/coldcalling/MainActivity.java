@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
       students.add(s);
     }
 
+    uncalledStudents = (ArrayList<Student>) students.clone();
+
     // create adapter
     CustomAdapater customAdapater = new CustomAdapater(this, students);
     // set adapter

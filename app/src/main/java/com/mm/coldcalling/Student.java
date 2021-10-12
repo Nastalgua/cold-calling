@@ -20,4 +20,11 @@ public class Student {
   }
 
   public int getImage() { return this.mImage; }
+
+  @Override
+  public boolean equals(Object o) {
+    Student s = (Student) o;
+
+    return s.mImage == this.mImage;
+  }
 }
