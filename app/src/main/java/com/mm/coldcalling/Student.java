@@ -2,45 +2,22 @@ package com.mm.coldcalling;
 
 public class Student {
   private String mFullName;
+  private int mImage;
   private boolean mCalledOn;
 
+  public Student(String fullName, int image, boolean calledOn) {
+    this.mFullName = fullName;
+    this.mImage = image;
+    this.mCalledOn = calledOn;
+  }
+
   public String getFullName() {
-    return mFullName;
+    return this.mFullName;
   }
 
   public boolean isCalledOn() {
-    return mCalledOn;
+    return this.mCalledOn;
   }
+
+  public int getImage() { return this.mImage; }
 }
-
-/*
-package com.example.exampleproject;
-
-public class Question {
-  private int mId;
-  private boolean mAns;
-
-  public Question(int id, boolean ans) {
-    this.mId = id;
-    this.mAns = ans;
-  }
-
-  public int getTextResId() {
-    return this.mId;
-  }
-
-  public boolean isAns() {
-    return mAns;
-  }
-
-  public void setTextResId(int id) {
-    this.mId= id;
-  }
-
-  public void setAnswerTrue(boolean ans) {
-    this.mAns = ans;
-  }
-
-}
-
- */

@@ -6,6 +6,7 @@
     <string name="called_log_btn">Called log</string>
     <string name="uncalled_log_btn">Uncalled Log</string>
     <string name="title_activity_uncalled_log">UncalledLog</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>

@@ -2,16 +2,31 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:gravity="bottom|center_horizontal"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+<!--  We can add a maximum width -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        >
+        <ListView
+            android:id="@+id/student_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            >
+        </ListView>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:layout_marginBottom="25dp"
+        android:paddingVertical="10dp"
         >
         <Button
             android:id="@+id/called_log_btn"
@@ -32,7 +47,6 @@
             android:id="@+id/uncalled_log_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/uncalled_log_btn"
-            />
+            android:text="@string/uncalled_log_btn" />
     </LinearLayout>
 </LinearLayout>
