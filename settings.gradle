@@ -1,0 +1,2 @@
+rootProject.name = "ColdCalling"
+include ':app'
