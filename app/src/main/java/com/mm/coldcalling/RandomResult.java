@@ -40,8 +40,6 @@ public class RandomResult extends AppCompatActivity {
     this.mBackBtn.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-//        Intent i = new Intent(RandomResult.this, MainActivity.class);
-//        startActivity(i);
         finish();
       }
     });

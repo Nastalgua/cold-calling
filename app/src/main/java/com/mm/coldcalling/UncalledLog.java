@@ -18,9 +18,9 @@ public class UncalledLog extends AppCompatActivity {
     this.studentsListView = findViewById(R.id.student_list);
 
     // create adapter
-    CustomAdapater customAdapater = new CustomAdapater(this, MainActivity.uncalledStudents);
+    CustomAdapter customAdapter = new CustomAdapter(this, MainActivity.uncalledStudents);
     // set adapter
-    this.studentsListView.setAdapter(customAdapater);
+    this.studentsListView.setAdapter(customAdapter);
 
   }
 }

@@ -3,12 +3,14 @@ package com.mm.coldcalling;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
   public static String[] names = {"aamir ali", "adrian yan", "alexander aney", "bipra dey", "daniel dultsin", "darren dong", "dhruv amin", "eden kogan", "eli bui", "elie belkin", "evelyn paskhaver", "fardin iqbal", "jerry he", "kenny cao", "marc rosenberg", "matthew chen", "michael wu", "ming lin", "mohammed ithtisham", "noam canter", "ralf pacia", "samuel iskhakov", "sean kerrigan", "selina li", "shuyue chen", "tanushri sundaram", "vasu patel", "xinrui ge", "zhen maysoon" };
@@ -19,12 +21,17 @@ public class MainActivity extends AppCompatActivity {
   private Button randomBtn, uncalledBtn, calledBtn;
   private ListView studentsListView;
 
+  private TextView mTime;
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
     this.studentsListView = findViewById(R.id.student_list);
+    this.mTime = findViewById(R.id.time);
+
+    this.mTime.setText(Calendar.getInstance().getTime().toString());
 
     // initialize the students
     for (int i = 0; i < 40; i++) {
@@ -45,8 +52,6 @@ public class MainActivity extends AppCompatActivity {
     // check if 24 hrs passed to reset calledOnStudents and uncalledStudents
 
     this.addListeners();
-
-
   }
 
   private void addListeners() {
