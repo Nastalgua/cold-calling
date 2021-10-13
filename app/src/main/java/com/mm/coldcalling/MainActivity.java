@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
+  public static String[] names = {"aamir ali", "adrian yan", "alexander aney", "bipra dey", "daniel dultsin", "darren dong", "dhruv amin", "eden kogan", "eli bui", "elie belkin", "evelyn paskhaver", "fardin iqbal", "jerry he", "kenny cao", "marc rosenberg", "matthew chen", "michael wu", "ming lin", "mohammed ithtisham", "noam canter", "ralf pacia", "samuel iskhakov", "sean kerrigan", "selina li", "shuyue chen", "tanushri sundaram", "vasu patel", "xinrui ge", "zhen maysoon" };
   public static ArrayList<Student> students = new ArrayList<>();
   public static ArrayList<Student> calledStudents = new ArrayList<>();
   public static ArrayList<Student> uncalledStudents = new ArrayList<>();
@@ -27,9 +28,11 @@ public class MainActivity extends AppCompatActivity {
 
     // initialize the students
     for (int i = 0; i < 40; i++) {
-      Student s = new Student("Matthew Chen", R.drawable.matthewchen, false);
+      Student s = new Student("Matthew Chen", R.drawable.matthew_chen, false);
       students.add(s);
     }
+
+    //initialize the images
 
     uncalledStudents = (ArrayList<Student>) students.clone();
     calledStudents = (ArrayList<Student>) students.clone();

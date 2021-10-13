@@ -12,7 +12,7 @@
         android:id="@+id/student_image"
         android:layout_width="326dp"
         android:layout_height="259dp"
-        app:srcCompat="@drawable/matthewchen" />
+        app:srcCompat="@drawable/matthew_chen" />
 
     <TextView
         android:id="@+id/full_name"

@@ -6,28 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".CalledLog">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Called Log"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="338dp" />
-
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:layout_editor_absoluteX="0dp">
-
-        <LinearLayout
-            android:id="@+id/calledList"
-            android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        >
+        <ListView
+            android:id="@+id/student_list"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"/>
+            android:dividerHeight="1dp"
+            android:divider="@drawable/list_divider"
+            >
+        </ListView>
+    </LinearLayout>
 
-    </ScrollView>
 
 
 

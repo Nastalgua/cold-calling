@@ -3,8 +3,8 @@
 
     <!--  Buttons  -->
     <string name="random_btn">Random</string>
-    <string name="called_log_btn">Called log</string>
-    <string name="uncalled_log_btn">Uncalled Log</string>
+    <string name="called_log_btn">Called</string>
+    <string name="uncalled_log_btn">Uncalled</string>
     <string name="title_activity_uncalled_log">UncalledLog</string>
     <string name="back_btn">Back</string>
     <string name="class_name">App Dev, Period 2</string>
