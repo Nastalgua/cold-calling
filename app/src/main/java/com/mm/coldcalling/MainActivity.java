@@ -27,11 +27,12 @@ public class MainActivity extends AppCompatActivity {
 
     // initialize the students
     for (int i = 0; i < 40; i++) {
-      Student s = new Student("Matthew Chen", R.drawable.cat, false);
+      Student s = new Student("Matthew Chen", R.drawable.aamirali, false);
       students.add(s);
     }
 
     uncalledStudents = (ArrayList<Student>) students.clone();
+    calledStudents = (ArrayList<Student>) students.clone();
 
     // create adapter
     CustomAdapater customAdapater = new CustomAdapater(this, students);
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
     // check if 24 hrs passed to reset calledOnStudents and uncalledStudents
 
     this.addListeners();
+
+
   }
 
   private void addListeners() {
