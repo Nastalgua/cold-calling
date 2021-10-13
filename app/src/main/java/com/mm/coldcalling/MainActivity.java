@@ -35,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
     calledStudents = (ArrayList<Student>) students.clone();
 
     // create adapter
-    CustomAdapater customAdapater = new CustomAdapater(this, students);
+    CustomAdapter customAdapter = new CustomAdapter(this, students);
     // set adapter
-    this.studentsListView.setAdapter(customAdapater);
+    this.studentsListView.setAdapter(customAdapter);
 
     // check if 24 hrs passed to reset calledOnStudents and uncalledStudents
 

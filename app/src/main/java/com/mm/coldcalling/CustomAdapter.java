@@ -13,11 +13,11 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-public class CustomAdapater implements ListAdapter {
+public class CustomAdapter implements ListAdapter {
   private ArrayList<Student> mStuds;
   private Context mContext;
 
-  public CustomAdapater(Context context, ArrayList<Student> studs) {
+  public CustomAdapter(Context context, ArrayList<Student> studs) {
     this.mContext = context;
     this.mStuds = studs;
   }
