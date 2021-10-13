@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     // initialize the students
     for (int i = 0; i < 40; i++) {
-      Student s = new Student("Matthew Chen", R.drawable.aamirali, false);
+      Student s = new Student("Matthew Chen", R.drawable.matthewchen, false);
       students.add(s);
     }
 

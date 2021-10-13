@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 
 import java.util.Random;
 
@@ -32,7 +32,7 @@ public class RandomResult extends AppCompatActivity {
 
     // set information
     this.mFullName.setText(student.getFullName());
-    Picasso.with(this).load(student.getImage()).into(this.mImg);
+    Glide.with(this).load(student.getImage()).into(this.mImg);
 
 //    MainActivity.uncalledStudents.remove(student);
 //    MainActivity.calledStudents.add(student);

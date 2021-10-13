@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -66,7 +66,7 @@ public class CustomAdapater implements ListAdapter {
       ImageView imag = convertView.findViewById(R.id.list_image);
       title.setText(studentData.getFullName());
 
-      Picasso.with(this.mContext)
+      Glide.with(this.mContext)
           .load(studentData.getImage())
           .into(imag);
     }
