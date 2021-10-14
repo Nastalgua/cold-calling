@@ -2,6 +2,7 @@ package com.mm.coldcalling;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -48,6 +49,30 @@ public class MainActivity extends AppCompatActivity {
     CustomAdapter customAdapter = new CustomAdapter(this, students);
     // set adapter
     this.studentsListView.setAdapter(customAdapter);
+
+    //set up time
+    Thread t = new Thread() {
+      @Override
+      public void run() {
+        try {
+          while (!isInterrupted()) {
+            Thread.sleep(1000);
+            runOnUiThread(new Runnable() {
+              @Override
+              public void run() {
+                TextView tdate = (TextView) findViewById(R.id.time);
+                long date = System.currentTimeMillis();
+                SimpleDateFormat sdf = new SimpleDateFormat("MMM dd yyyy hh-mm-ss a");
+                String dateString = sdf.format(date);
+                tdate.setText(dateString);
+              }
+            });
+          }
+        } catch (InterruptedException e) {
+        }
+      }
+    };
+    t.start();
 
     // check if 24 hrs passed to reset calledOnStudents and uncalledStudents
 
