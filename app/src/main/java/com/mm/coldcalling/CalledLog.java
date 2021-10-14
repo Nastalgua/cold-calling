@@ -20,16 +20,17 @@ public class CalledLog extends AppCompatActivity {
 
     this.studentsListView = findViewById(R.id.student_list);
     this.backBtn = findViewById(R.id.back_btn);
+
     // create adapter
-    CustomAdapter customAdapter = new CustomAdapter(this, MainActivity.uncalledStudents);
-    // set adapter
-    this.studentsListView.setAdapter(customAdapter);
+    if (MainActivity.calledStudents.size() > 0) {
+      CustomAdapter customAdapter = new CustomAdapter(this, MainActivity.calledStudents);
+      this.studentsListView.setAdapter(customAdapter);
+    }
 
     this.backBtn.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        Intent i = new Intent(CalledLog.this, MainActivity.class);
-        startActivity(i);
+        finish();
       }
     });
   }

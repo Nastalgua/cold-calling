@@ -1,25 +1,54 @@
 package com.mm.coldcalling;
 
-public class Student {
+import java.io.Serializable;
+import java.util.Calendar;
+import java.util.Date;
+
+public class Student implements Serializable {
   private String mFullName;
   private int mImage;
-  private boolean mCalledOn;
+  private Date mLastCalled;
+  private int mCalledOnCount;
 
   public Student(String fullName, int image, boolean calledOn) {
     this.mFullName = fullName;
     this.mImage = image;
-    this.mCalledOn = calledOn;
+    this.mCalledOnCount = 0;
   }
 
   public String getFullName() {
     return this.mFullName;
   }
 
-  public boolean isCalledOn() {
-    return this.mCalledOn;
+  public int getImage() { return this.mImage; }
+
+  public int getCalledOnCount() { return mCalledOnCount; }
+
+  public void resetStudent() {
+    this.mCalledOnCount = 0;
+    this.mLastCalled = null;
   }
 
-  public int getImage() { return this.mImage; }
+  public boolean allowCall() {
+    return this.mCalledOnCount < 1;
+  }
+
+  public void callOn() {
+    this.mCalledOnCount++;
+    this.mLastCalled = Calendar.getInstance().getTime();
+  }
+
+  public boolean isNewDay() {
+    if (this.mLastCalled == null) return false;
+
+    Calendar calendar1 = Calendar.getInstance();
+    calendar1.setTime(this.mLastCalled);
+
+    Calendar calendar2 = Calendar.getInstance();
+    calendar2.setTime(calendar2.getTime());
+
+    return calendar1.get(Calendar.DATE) != calendar2.get(Calendar.DATE);
+  }
 
   @Override
   public boolean equals(Object o) {
