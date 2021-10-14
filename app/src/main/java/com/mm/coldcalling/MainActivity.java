@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+  public static String[] images = {R.drawable.aamir_ali, R.drawable.adrian_yan, R.drawable.alexander_aney, R.drawable.bipra_dey, R.drawable.daniel_dultsin, R.drawable.darren_dong, R.drawable.dhruv_amin, R.drawable.eden_kogan, R.drawable.eli_bui, R.drawable.elie_belkin, R.drawable.evelyn_paskhaver, R.drawable.fardin iqbal, R.drawable.jerry_he, R.drawable.kenny_cao, R.drawable.marc_rosenberg, R.drawable.matthew_chen, R.drawable.michael_wu, R.drawable.ming_lin, R.drawable.mohammed_ithtisham, R.drawable.noam_canter, R.drawable.ralf_pacia, R.drawable.samuel_iskhakov, R.drawable.sean_kerrigan, R.drawable.selina_li, R.drawable.shuyue_chen, R.drawable.tanushri_sundaram, R.drawable.vasu_patel, R.drawable.xinrui_ge, R.drawable.zhen_maysoon };
   public static String[] names = {"aamir ali", "adrian yan", "alexander aney", "bipra dey", "daniel dultsin", "darren dong", "dhruv amin", "eden kogan", "eli bui", "elie belkin", "evelyn paskhaver", "fardin iqbal", "jerry he", "kenny cao", "marc rosenberg", "matthew chen", "michael wu", "ming lin", "mohammed ithtisham", "noam canter", "ralf pacia", "samuel iskhakov", "sean kerrigan", "selina li", "shuyue chen", "tanushri sundaram", "vasu patel", "xinrui ge", "zhen maysoon" };
   public static ArrayList<Student> students = new ArrayList<>();
   public static ArrayList<Student> calledStudents = new ArrayList<>();
