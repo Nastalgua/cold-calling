@@ -7,8 +7,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity"
     >
-
-    <!--  We can add a maximum width -->
+<!--  We can add a maximum width -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,18 +17,10 @@
             android:id="@+id/class_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="36dp"
+            android:textSize="24dp"
             android:text="@string/class_name"
             tools:ignore="MissingConstraints">
         </TextView>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
 
         <TextView
             android:id="@+id/time"
@@ -37,6 +28,7 @@
             android:layout_height="wrap_content"
             android:textSize="24dp"
             android:text="{time}"
+            app:layout_constraintEnd_toEndOf="parent"
             tools:ignore="MissingConstraints">
 
         </TextView>
@@ -45,41 +37,43 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="10">
-
+        android:layout_weight="10"
+        >
         <ListView
             android:id="@+id/student_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:dividerHeight="1dp"
             android:divider="@drawable/list_divider"
-            android:dividerHeight="1dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:paddingVertical="10dp">
-
-                <Button
-                    android:id="@+id/called_log_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/called_log_btn" />
-
-                <Button
-                    android:id="@+id/random_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="15dp"
-                    android:text="@string/random_btn" />
-
-                <Button
-                    android:id="@+id/uncalled_log_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/uncalled_log_btn" />
-            </LinearLayout>
+            >
         </ListView>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingVertical="10dp"
+        >
+        <Button
+            android:id="@+id/called_log_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/called_log_btn"
+            />
+
+        <Button
+            android:id="@+id/random_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:text="@string/random_btn"
+            />
+
+        <Button
+            android:id="@+id/uncalled_log_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/uncalled_log_btn" />
+    </LinearLayout>
 </LinearLayout>
