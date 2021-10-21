@@ -24,6 +24,8 @@ public class Student implements Serializable {
 
   public int getCalledOnCount() { return mCalledOnCount; }
 
+  public Date getLastCalled() { return mLastCalled; }
+
   public void resetStudent() {
     this.mCalledOnCount = 0;
     this.mLastCalled = null;

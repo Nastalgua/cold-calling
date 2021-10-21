@@ -55,11 +55,14 @@ public class MainActivity extends AppCompatActivity {
     students = loadData();
 
     for (int i = 0; i < students.size(); i++) {
-      if (!students.get(i).allowCall()) {
-        calledStudents.add(students.get(i));
-      } else {
-        uncalledStudents.add(students.get(i));
+      if (!students.get(i).isNewDay()) {
+        if (!students.get(i).allowCall()) {
+          calledStudents.add(students.get(i));
+        } else {
+          uncalledStudents.add(students.get(i));
+        }
       }
+
     }
 
     // create adapter
@@ -89,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
         }
       }
     };
+
     t.start();
 
     // check if 24 hrs passed to reset calledOnStudents and uncalledStudents
